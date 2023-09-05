@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CropYard" parent="Theme.Material3.DayNight.NoActionBar">
+
+            <!-- Customize the status bar color -->
+            <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+            <!-- Add other style attributes as needed -->
+
+        <!-- Customize your light theme here. -->
+<!--         <item name="colorPrimary">@color/black</item>-->
+    </style>
+
+
+
+    <style name="Theme.CropYard" parent="Base.Theme.CropYard" />
+</resources>
