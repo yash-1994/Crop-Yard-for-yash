@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Rectangular background -->
+    <item android:right="2dp" android:left="2dp">
+        <shape android:shape="rectangle">
+            <!-- Define the background color and border for the focused state -->
+            <solid android:color="#FAFAFA" /> <!-- Background color -->
+
+            <corners android:radius="8dp"/>
+
+            <stroke
+                android:width="2dp"
+            android:color="#D8D4D4" />
+        </shape>
+    </item>
+</selector>

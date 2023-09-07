@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/user_option_english"
+        android:title="English" />
+    <item
+        android:id="@+id/user_option_hindi"
+        android:title="हिंदी" />
+    <item
+        android:id="@+id/user_option_gujarati"
+        android:title="ગુજરાતી" />
+</menu>
