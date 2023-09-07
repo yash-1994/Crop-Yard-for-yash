@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainAddCrop">
+
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/constraintLayout2"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="10dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:onClick="onExit"
+        android:padding="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_close" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="2dp"
+        android:text="Add New Item"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+    <Button
+        android:id="@+id/mainAddCropSavebtn"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/green"
+        android:hapticFeedbackEnabled="false"
+        android:onClick="saveCrop"
+
+        android:text="SAVE"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+  <ScrollView
+      android:id="@+id/scrollView2"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="1.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+      app:layout_constraintVertical_bias="0.0">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="50dp">
+
+      <TextView
+          android:id="@+id/textView3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="18dp"
+          android:layout_marginTop="24dp"
+          android:text="Category"
+          android:textColor="@color/black"
+          android:textSize="16dp"
+          android:textStyle="bold"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/cityChosserSpinner" />
+
+      <Spinner
+          android:id="@+id/spinner"
+          android:layout_width="0dp"
+          android:layout_height="45dp"
+          android:layout_centerHorizontal="true"
+          android:layout_marginStart="16dp"
+          android:layout_marginTop="6dp"
+          android:layout_marginEnd="16dp"
+          android:background="@drawable/user_card_rectangle_with_circul"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+      <TextView
+          android:id="@+id/textView4"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="18dp"
+          android:layout_marginTop="24dp"
+          android:text="Enter Title"
+          android:textColor="@color/black"
+          android:textSize="16dp"
+          android:textStyle="bold"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/mainUploadCropImage" />
+
+      <EditText
+          android:id="@+id/mainAddCropTitle"
+          android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:layout_marginStart="16dp"
+          android:layout_marginTop="6dp"
+          android:layout_marginEnd="16dp"
+          android:background="@drawable/edittext_border"
+          android:drawableEnd="@drawable/ic_title_icon"
+          android:hint="Enter Title"
+          android:inputType="text"
+          android:maxLines="1"
+          android:paddingStart="20dp"
+          android:paddingEnd="10dp"
+          android:textColor="@color/black"
+          android:textSize="16dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.0"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+      <TextView
+          android:id="@+id/textView5"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="18dp"
+          android:layout_marginTop="24dp"
+          android:text="Enter Description"
+          android:textColor="@color/black"
+          android:textSize="16dp"
+          android:textStyle="bold"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/mainAddCropTitle" />
+
+      <EditText
+          android:id="@+id/mainAddCropDescription"
+          android:layout_width="match_parent"
+          android:layout_height="110dp"
+          android:layout_marginStart="16dp"
+          android:layout_marginTop="6dp"
+          android:layout_marginEnd="16dp"
+          android:background="@drawable/edittext_border"
+          android:drawableEnd="@drawable/ic_description_icon"
+          android:gravity="top"
+          android:hint="Enter Description"
+          android:maxLines="5"
+          android:paddingStart="20dp"
+          android:paddingTop="10dp"
+          android:paddingEnd="10dp"
+          android:paddingBottom="10dp"
+          android:textColor="@color/black"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.0"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+      <ImageView
+          android:id="@+id/mainUploadCropImage"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="16dp"
+          android:layout_marginTop="24dp"
+          android:layout_marginEnd="16dp"
+          android:background="@drawable/item_dotted_border"
+          android:contentDescription="Selected Image"
+          android:onClick="selectImage"
+          android:padding="10dp"
+          android:src="@drawable/ic_white_background_icon"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHeight_max="600dp"
+          app:layout_constraintHeight_min="100dp"
+          app:layout_constraintHorizontal_bias="1.0"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+      <TextView
+          android:id="@+id/textView6"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="18dp"
+          android:layout_marginTop="24dp"
+          android:text="Item Quantity"
+          android:textColor="@color/black"
+          android:textSize="16dp"
+          android:textStyle="bold"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/mainAddCropDescription" />
+
+
+      <EditText
+          android:id="@+id/mainAddCropItemQuantity"
+          android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:layout_marginStart="16dp"
+          android:layout_marginTop="6dp"
+          android:layout_marginEnd="16dp"
+          android:background="@drawable/edittext_border"
+          android:drawableEnd="@drawable/ic_weight_icon"
+          android:hint="Item Quantity in kg"
+          android:inputType="numberDecimal"
+          android:padding="10dp"
+          android:paddingStart="20dp"
+          android:paddingEnd="10dp"
+          android:textColor="@color/black"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+      <EditText
+          android:id="@+id/mainAddCropPrice"
+          android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:layout_marginStart="16dp"
+          android:layout_marginTop="6dp"
+          android:layout_marginEnd="16dp"
+          android:background="@drawable/edittext_border"
+          android:drawableEnd="@drawable/ic_currency_rupee_icon"
+          android:hint="Price for 20 KG"
+          android:inputType="numberDecimal"
+          android:padding="10dp"
+          android:paddingStart="20dp"
+          android:paddingEnd="10dp"
+          android:textColor="@color/black"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="1.0"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+      <TextView
+          android:id="@+id/textView8"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="18dp"
+          android:layout_marginTop="24dp"
+          android:text="Expected Price"
+          android:textColor="@color/black"
+          android:textSize="16dp"
+          android:textStyle="bold"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/mainAddCropItemQuantity" />
+
+
+      <LinearLayout
+          android:id="@+id/upload_image_icon_txt_linearlayout"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:gravity="center_vertical"
+          android:orientation="horizontal"
+          app:layout_constraintBottom_toBottomOf="@+id/mainUploadCropImage"
+          app:layout_constraintEnd_toEndOf="@+id/mainUploadCropImage"
+          app:layout_constraintStart_toStartOf="@+id/mainUploadCropImage"
+          app:layout_constraintTop_toTopOf="@+id/mainUploadCropImage">
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingEnd="4dp"
+            android:text="Upload Image of"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:id="@+id/upload_image_new_crop"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+
+            app:srcCompat="@drawable/upload_from_gallary_cloud_img" />
+
+      </LinearLayout>
+
+      <TextView
+          android:id="@+id/textViewMobileNumber"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="18dp"
+          android:layout_marginTop="24dp"
+          android:text="Mobile Number"
+          android:textColor="@color/black"
+          android:textSize="16dp"
+          android:textStyle="bold"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/mainAddCropPrice" />
+
+      <EditText
+          android:id="@+id/mainAddCropNumber"
+          android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:layout_marginStart="16dp"
+          android:layout_marginTop="6dp"
+          android:layout_marginEnd="16dp"
+          android:background="@drawable/edittext_border"
+          android:drawableEnd="@drawable/ic_mobile_icon"
+      android:hint="Enter Mobile Number"
+      android:inputType="number"
+      android:padding="10dp"
+      android:paddingStart="20dp"
+      android:paddingEnd="10dp"
+      android:textColor="@color/black"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textViewMobileNumber" />
+
+      <TextView
+          android:id="@+id/textViewLocation"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="18dp"
+          android:layout_marginTop="16dp"
+          android:text="Location"
+          android:textColor="@color/black"
+          android:textSize="16dp"
+          android:textStyle="bold"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <Spinner
+          android:id="@+id/cityChosserSpinner"
+          android:layout_width="0dp"
+          android:layout_height="45dp"
+          android:layout_centerHorizontal="true"
+          android:layout_marginStart="16dp"
+          android:layout_marginTop="6dp"
+          android:layout_marginEnd="16dp"
+          android:background="@drawable/user_card_rectangle_with_circul"
+
+
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textViewLocation" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="289dp"
+        android:layout_height="253dp"
+        android:layout_marginTop="124dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/about_us_image" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_button" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="143dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:text="About Us"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="404dp"
+        android:layout_height="465dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView39"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView38" />
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="20dp"
+                android:text="Join the Cropyard Revolution"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView35" />
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="320dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="12dp"
+                android:text="Community Hub: Join our community of farmers and buyers to exchange knowledge, share experiences, and learn more about agriculture."
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView34" />
+
+            <TextView
+                android:id="@+id/textView34"
+                android:layout_width="322dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="12dp"
+                android:text="Secure Transactions: Our platform ensures secure and hassle-free transactions, giving you peace of mind."
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView33" />
+
+            <TextView
+                android:id="@+id/textView32"
+                android:layout_width="321dp"
+                android:layout_height="51dp"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="12dp"
+                android:text="Crop Listings: Browse a wide variety of crops available for sale from local farmers. Find the freshest produce with just a few clicks."
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="20dp"
+                android:text="Our Services"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView29" />
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="326dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="12dp"
+                android:text="Supporting Agriculture: By using Cropyard, you are supporting local farmers and contributing to the growth of sustainable agriculture."
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="318dp"
+                android:layout_height="68dp"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="12dp"
+                android:text="Transparency: We believe in transparency. Cropyard provides clear information about products, prices, and the people behind the produce."
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="336dp"
+                android:layout_height="68dp"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="12dp"
+                android:text="Convenience: Say goodbye to the hassles of traditional marketplaces. Cropyard allows you to buy and sell crops from the comfort of your home, anytime, anywhere."
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="331dp"
+                android:layout_height="59dp"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="12dp"
+                android:text="Quality Assurance: We are committed to ensuring the quality of crops sold on our platform. Buyers can trust the products they purchase from Cropyard."
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="332dp"
+                android:layout_height="71dp"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="12dp"
+                android:text="Empowering Farmers: We prioritize the needs of our farming community. Cropyard provides a user-friendly platform that enables farmers to showcase their produce and reach a wider audience."
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="20dp"
+                android:text="Why Choose Cropyard?"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="330dp"
+                android:layout_height="89dp"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="12dp"
+                android:text="At Cropyard, our mission is simple: to empower farmers and enhance agricultural commerce. We strive to create a platform that bridges the gap between farmers and buyers, making it easier than ever to buy and sell crops online."
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="20dp"
+                android:text="Our Mission"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="333dp"
+                android:layout_height="105dp"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="12dp"
+                android:text="Welcome to Cropyard, your trusted online marketplace connecting farmers with buyers. At Cropyard, we are passionate about revolutionizing the way agriculture meets the digital world. Our platform is designed with the vision of empowering farmers and facilitating seamless crop trading."
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="5dp"
+                android:text="About Cropyard"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="244dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="28dp"
+                android:text="Proudly built in India for India 🇮🇳"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView33"
+                android:layout_width="312dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="12dp"
+                android:text="Seller Profiles: Get to know the farmers and their farming practices. We believe in connecting you with the people who grow your food."
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+            <TextView
+                android:id="@+id/textView37"
+                android:layout_width="317dp"
+                android:layout_height="99dp"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="12dp"
+                android:text="Join us in revolutionizing the way agriculture is done. Whether you're a farmer looking to sell your crops or a buyer seeking fresh, locally sourced produce, Cropyard is your go-to platform. Together, we can nurture sustainable farming practices and foster a thriving agricultural community."
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView36" />
+
+            <TextView
+                android:id="@+id/textView38"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="©️All right reserved by CropYard"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

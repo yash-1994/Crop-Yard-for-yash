@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/rectangle_with_circular_border.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Rectangular background -->
+    <item android:right="2dp" android:left="2dp">
+        <shape android:shape="rectangle">
+            <!-- Define the background color and border for the focused state -->
+            <solid android:color="@color/green" /> <!-- Background color -->
+
+            <corners android:bottomLeftRadius="50dp"
+                android:bottomRightRadius="50dp"/>
+
+        </shape>
+    </item>
+</selector>
