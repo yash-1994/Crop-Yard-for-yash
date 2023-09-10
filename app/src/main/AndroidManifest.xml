@@ -14,9 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CropYard"
         tools:targetApi="31">
-        <activity
-            android:name=".Explore"
-            android:exported="false" />
+
         <activity
             android:name=".Profile"
             android:exported="false" />

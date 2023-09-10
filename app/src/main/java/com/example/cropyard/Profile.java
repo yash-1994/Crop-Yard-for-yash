@@ -16,8 +16,9 @@ import android.widget.PopupMenu;
 import android.widget.Toast;
 
 public class Profile extends AppCompatActivity {
-    ConstraintLayout userLanguageBtn, userPrivacyPolicyBtn, userAboutUsBtn;
-    String selectedLanguage = "English";
+    ConstraintLayout  userPrivacyPolicyBtn, userAboutUsBtn;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,17 +33,9 @@ public class Profile extends AppCompatActivity {
 
 
         // Language Selection Button
-        userLanguageBtn = findViewById(R.id.userLanguageBtn);
-        userLanguageBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showLanguagePopUpMenu(view);
-
-            }
-        });
 
 
-                                // change Fragements
+
         // go to AboutUs
         userAboutUsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,39 +65,4 @@ public class Profile extends AppCompatActivity {
         }
     }
 
-
-    // Language On Click Method
-    public void showLanguagePopUpMenu(View view) {
-        // Initializing the popup menu and giving the reference as current context
-        PopupMenu popupMenu = new PopupMenu(Profile.this, userLanguageBtn);
-
-        // Inflating popup menu from popup_menu.xml file
-        popupMenu.getMenuInflater().inflate(R.menu.language_change_pop_up_menu, popupMenu.getMenu());
-        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem menuItem) {
-                selectedLanguage = (String) menuItem.getTitle();
-                if(selectedLanguage.equals("English")) {
-
-                    Toast.makeText(Profile.this, "Yessss", Toast.LENGTH_SHORT).show();
-                    // chage language YASHHHHHHHHHHHHHHHHHHHHHHHH
-
-                } else if(selectedLanguage.equals("हिंदी")) {
-
-                    // chage language YASHHHHHHHHHHHHHHHHHHHHHHHH
-
-                } else if (selectedLanguage.equals("ગુજરાતી")) {
-
-                    // chage language YASHHHHHHHHHHHHHHHHHHHHHHHH
-
-                }
-                return true;
-            }
-        });
-        // Showing the popup menu
-        popupMenu.show();
-
-
-
-    }
 }

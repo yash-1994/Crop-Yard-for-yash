@@ -105,7 +105,7 @@
           app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
       <TextView
-          android:id="@+id/textView4"
+          android:id="@+id/textViewTitleText"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_marginStart="18dp"
@@ -136,7 +136,7 @@
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintHorizontal_bias="0.0"
           app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@+id/textView4" />
+          app:layout_constraintTop_toBottomOf="@+id/textViewTitleText" />
 
       <TextView
           android:id="@+id/textView5"
@@ -192,38 +192,6 @@
           app:layout_constraintStart_toStartOf="parent"
           app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
-      <TextView
-          android:id="@+id/textView6"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginStart="18dp"
-          android:layout_marginTop="24dp"
-          android:text="Item Quantity"
-          android:textColor="@color/black"
-          android:textSize="16dp"
-          android:textStyle="bold"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@+id/mainAddCropDescription" />
-
-
-      <EditText
-          android:id="@+id/mainAddCropItemQuantity"
-          android:layout_width="match_parent"
-          android:layout_height="45dp"
-          android:layout_marginStart="16dp"
-          android:layout_marginTop="6dp"
-          android:layout_marginEnd="16dp"
-          android:background="@drawable/edittext_border"
-          android:drawableEnd="@drawable/ic_weight_icon"
-          android:hint="Item Quantity in kg"
-          android:inputType="numberDecimal"
-          android:padding="10dp"
-          android:paddingStart="20dp"
-          android:paddingEnd="10dp"
-          android:textColor="@color/black"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
       <EditText
           android:id="@+id/mainAddCropPrice"
@@ -256,7 +224,7 @@
           android:textSize="16dp"
           android:textStyle="bold"
           app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@+id/mainAddCropItemQuantity" />
+          app:layout_constraintTop_toBottomOf="@+id/mainAddCropDescription" />
 
 
       <LinearLayout

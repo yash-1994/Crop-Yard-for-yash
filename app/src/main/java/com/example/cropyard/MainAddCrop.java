@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
@@ -20,13 +21,13 @@ import java.util.Arrays;
 public class MainAddCrop extends AppCompatActivity {
 
     Spinner spinner, citySelecterSpinner;
-    String selectedItemName = "Nothing", selectedCityName = "Nothing", title = null, description = null, itemQuantity = null, cropProce = null, number = null;
+    String selectedItemName = "Nothing", selectedCityName = "Nothing", title = null, description = null,  cropProce = null, number = null;
     boolean isUserAddImage = false;
     private static final int PICK_IMAGE_FROM_GALLERY = 1;
     private static final int PICK_IMAGE_FROM_CAMERA = 2;
     private ImageView uploadCropImage;
     private Uri selectedImageUri;
-    EditText mainAddCropTitle, mainAddCropDescription, mainAddCropItemQuantity, mainAddCropPrice, mainAddCropNumber;
+    EditText mainAddCropTitle, mainAddCropDescription, mainAddCropPrice, mainAddCropNumber;
     LinearLayout uploadImageTextShownLinearLayout;
     ImageView upload_image_new_crop;
 
@@ -39,7 +40,7 @@ public class MainAddCrop extends AppCompatActivity {
         uploadCropImage = findViewById(R.id.mainUploadCropImage);
         mainAddCropTitle = findViewById(R.id.mainAddCropTitle);
         mainAddCropDescription = findViewById(R.id.mainAddCropDescription);
-        mainAddCropItemQuantity = findViewById(R.id.mainAddCropItemQuantity);
+
         mainAddCropPrice = findViewById(R.id.mainAddCropPrice);
         mainAddCropNumber = findViewById(R.id.mainAddCropNumber);
 
@@ -50,8 +51,8 @@ public class MainAddCrop extends AppCompatActivity {
 //         Get a reference to the Spinner
         spinner = findViewById(R.id.spinner);
 
-        String[] items = {"Cotton", "Lentil", "Millet", "Mung Beans", "Peanut", "Rice", "Soybean", "Wheat"};
-        int[] imageIds = {R.drawable.li_cotton_icon, R.drawable.li_lentil_icon, R.drawable.li_millet_icon, R.drawable.li_mung_beans_icon, R.drawable.li_peanut_icon, R.drawable.li_rice_icon, R.drawable.li_soybean_icon, R.drawable.li_wheat_icon};
+        String[] items = {"Cotton", "Lentil", "Millet", "Mung Beans", "Peanut", "Rice", "Soybean", "Wheat", "Other"};
+        int[] imageIds = {R.drawable.li_cotton_icon, R.drawable.li_lentil_icon, R.drawable.li_millet_icon, R.drawable.li_mung_beans_icon, R.drawable.li_peanut_icon, R.drawable.li_rice_icon, R.drawable.li_soybean_icon, R.drawable.li_wheat_icon, R.drawable.user_arrow_forward};
 
         CropIListtemAdapter adapter = new CropIListtemAdapter(this, items, imageIds);
         spinner.setAdapter(adapter);
@@ -65,7 +66,17 @@ public class MainAddCrop extends AppCompatActivity {
 
                 // Display a Toast message with the selected item text
 
-                Toast.makeText(MainAddCrop.this, "Selected Item: " + selectedItemName, Toast.LENGTH_SHORT).show();
+                if(selectedItemName.equals("Other")) {
+                    mainAddCropTitle.setEnabled(true);
+                    mainAddCropTitle.setHint("Enter Title");
+                    mainAddCropTitle.setText("");
+                    mainAddCropTitle.requestFocus(); // Set focus to EditText if enabled
+                }
+                else {
+                    mainAddCropTitle.setEnabled(false);
+                    mainAddCropTitle.setHint(selectedItemName);
+                    mainAddCropTitle.setText(selectedItemName);
+                }
                 // changing upload icon
                 upload_image_new_crop.setImageResource(imageIds[position]);
             }
@@ -114,14 +125,14 @@ public class MainAddCrop extends AppCompatActivity {
         // Get the values from the EditText fields
         title = mainAddCropTitle.getText().toString();
         description = mainAddCropDescription.getText().toString();
-        itemQuantity = mainAddCropItemQuantity.getText().toString();
+
         cropProce = mainAddCropPrice.getText().toString();
         number = mainAddCropNumber.getText().toString();
 
 
 
         // Check if any of the fields are empty or if no image is selected
-        if (title.isEmpty() || description.isEmpty() || itemQuantity.isEmpty() || cropProce.isEmpty() || !isUserAddImage || number.length() != 10) {
+        if (title.isEmpty() || description.isEmpty()  || cropProce.isEmpty() || !isUserAddImage || number.length() != 10) {
             // Display an alert dialog
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle("Error");
