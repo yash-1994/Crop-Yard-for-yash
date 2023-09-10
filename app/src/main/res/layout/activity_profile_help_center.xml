@@ -52,7 +52,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/help_text"
         android:layout_width="356dp"
         android:layout_height="49dp"
         android:layout_marginTop="12dp"
@@ -78,7 +78,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <EditText
-        android:id="@+id/editTextPhone"
+        android:id="@+id/help_phone"
         android:layout_width="356dp"
         android:layout_height="49dp"
         android:layout_marginTop="16dp"
@@ -102,10 +102,10 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/help_text" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/help_submit"
         android:layout_width="210dp"
         android:layout_height="55dp"
         android:layout_marginTop="48dp"
@@ -116,5 +116,5 @@
         app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+        app:layout_constraintTop_toBottomOf="@+id/help_phone" />
 </androidx.constraintlayout.widget.ConstraintLayout>
